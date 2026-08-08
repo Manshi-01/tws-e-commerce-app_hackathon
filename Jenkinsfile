@@ -14,14 +14,6 @@ pipeline {
     
     stages {
         
-        stage('Clone Repository') {
-            steps {
-                script {
-                    clone("https://github.com/Manshi-01/tws-e-commerce-app_hackathon.git","master")
-                }
-            }
-        }
-        
         stage('Build Docker Images') {
             parallel {
                 stage('Build Main App Image') {
